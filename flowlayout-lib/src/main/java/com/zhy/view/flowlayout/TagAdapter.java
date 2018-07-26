@@ -13,6 +13,16 @@ import java.util.Set;
 public abstract class TagAdapter<T> {
     private List<T> mTagDatas;
     private OnDataChangedListener mOnDataChangedListener;
+
+    public List<T> getDatas() {
+        return mTagDatas;
+    }
+
+    public void setDatas(List<T> mTagDatas) {
+        this.mTagDatas = mTagDatas;
+        notifyDataChanged();
+    }
+
     @Deprecated
     private HashSet<Integer> mCheckedPosList = new HashSet<Integer>();
 
